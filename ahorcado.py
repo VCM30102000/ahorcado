@@ -103,7 +103,7 @@ def top5():
     arch = open("partidas", "r")
     for p in arch:
         partidas.append(p.replace("\n", "").split("|"))
-    partidas = sorted(partidas, key=lambda x: int(x[1])-int(x[2]))
+    partidas = sorted(partidas, key=lambda x: int(x[1])/int(x[2]))
     if len(partidas)>5:
         partidas=partidas[:5]
     return partidas
