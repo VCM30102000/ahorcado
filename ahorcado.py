@@ -147,7 +147,16 @@ while exit==False:
         clear()
 
         palabra=palabras[random.randint(0,len(palabras)-1)]
-        lineas="_ "*(len(palabra)-1)+"_"
+        lineas=""
+        for a in range(len(palabra)-1):
+            if palabra[a]!=" ":
+                lineas+="_ "
+            else:
+                lineas+="⠀ "
+        if palabra[len(palabra)-1]!=" ":
+            lineas+="_"
+        else:
+            lineas+="⠀"
 
         error=0
         LetrasUsadas=""
@@ -252,8 +261,9 @@ while exit==False:
         nicolas.cartalla@correo.ucu.edu.uy
   * Valentina Cabrera
         valentina.cabreram@correo.ucu.edu.uy
-Repositorio del Juego:
-        https://github.com/nicocartalla/ahorcado.git""")
+
+Repositorio del juego:
+    https://github.com/nicocartalla/ahorcado.git""")
         input()
 
     if ans=="3":
